@@ -1,0 +1,62 @@
+/* Sets the main background image */
+main {
+    background-image: url("images/hero-bg.png");
+    height: 100vh; /* Use vh to make the background fill the screen height */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- Key styles for top-right navigation --- */
+
+/* 1. Make the nav bar a flex container */
+nav {
+    display: flex;
+    justify-content: space-between; /* This pushes the logo and links apart */
+    align-items: center;            /* This vertically centers them */
+    padding: 15px 30px;             /* Adds some spacing around the nav bar */
+}
+
+/* 2. Style the container for the links */
+.navbar-links {
+    display: flex;
+    align-items: center; /* Vertically aligns all nav items with each other */
+    gap: 30px;           /* Sets the space between each navigation item */
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Style for individual list items */
+.nav-link {
+    list-style-type: none; /* Removes the bullet points */
+}
+
+/* 4. Style for standard text links */
+.nav-link a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    text-transform: capitalize; /* Makes the first letter of each word uppercase */
+}
+
+/* 5. NEW: Style for the login and sign-up buttons */
+.nav-button {
+    background-color: transparent; /* A sample green background */
+    padding: 10px 20px;
+    border-radius: 15px;      /* Gives the buttons rounded corners */
+    font-weight: bold;
+    border: 10px solid transparent;
+}
+
+/* Optional: Add a hover effect for the buttons */
+.nav-button:hover {
+   
+    border-color: #1e7e34;
+    color:white
+}
+
+/* Optional: Adjust logo size */
+.logo {
+    height: 50px;
+}
