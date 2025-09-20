@@ -143,5 +143,38 @@
             </form>
         </section>
     </main>
+    <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("#reserve form");
+    const nameInput = form.querySelector("input[type='text']");
+    const emailInput = form.querySelector("input[type='email']");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = nameInput.value.trim();
+      const email = emailInput.value.trim();
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if (name === "") {
+        alert("Please enter your name.");
+        nameInput.focus();
+        return;
+      }
+
+      if (!emailPattern.test(email)) {
+        alert("Please enter a valid email address.");
+        emailInput.focus();
+        return;
+      }
+
+      // If all is valid
+      console.log("Form submitted successfully!");
+      console.log("Name:", name);
+      console.log("Email:", email);
+      form.reset(); // Optional: clear the form
+    });
+  });
+</script>
 </body>
 </html>
